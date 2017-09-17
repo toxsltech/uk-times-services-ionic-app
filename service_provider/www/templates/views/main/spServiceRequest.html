@@ -1,0 +1,76 @@
+<ion-view title="Notifications" id="page4" style="">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="ionicGoBack()">
+            <i class="icon ion-android-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        <div class="table-box">
+            <div style="height:{{profileImgBoxSize}}px" class="table-cell v-mid profile-image-box">
+                <div class="profile-pic">
+                    <img ng-if=!dataprolist.User.image src="img/user.jpg">
+                    <img ng-if="dataprolist.User.image" ng-src="{{dataprolist.User.image}}">
+                </div>
+                <p class="text-center text-center text-white ">{{dataprolist.user.first_name}}</p>
+            </div>
+        </div>
+        <div class="list padding-horizontal ">
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Service Request</span>
+                <input type="text" placeholder="{{dataprolist.service.service_name}}">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Price</span>
+                <input type="text" placeholder="£ {{dataprolist.service.price}}">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Service Location</span>
+                <textarea rows="1" class="no-border no-resize " placeholder="{{dataprolist.address}}"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Type</span>
+                <input type="text" placeholder="{{dataprolist.book_for}}">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Service Type</span>
+                <input type="text" placeholder="{{dataprolist.booking_hour}}">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Scheduled Date and Time</span>
+                <input type="text" placeholder="{{dataprolist.booking_time}}">
+            </label>
+           
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">Street</span>
+                <textarea rows="1" class="no-border no-resize " placeholder="{{dataprolist.task_location}}"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom no-click">
+                <span class="input-label">City</span>
+                <textarea rows="1" class="no-border no-resize " placeholder="{{dataprolist.task_location}}"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label no-border no-click">
+                <span class="input-label">Description</span>
+                <textarea rows="5" class="no-border no-resize " placeholder="{{dataprolist.about_task}}"></textarea>
+            </label>
+            <div class="item no-border no-padding">
+                <div class="row">
+                    <div class="col">
+                        <button ng-click="accept()" class="button button-energized button-block">
+                            Accept
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button ng-click="decline()" class="button button-energized button-block">
+                            Reject
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <style type="text/css">
+    .bar.bar-positive {
+        border: none !important;
+    }
+    </style>
+</ion-view>

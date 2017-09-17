@@ -1,0 +1,33 @@
+<ion-view title="Settings" hide-back-button="true">
+    <ion-content padding="false" class="has-header ">
+        <ul class="list setting-list">
+            <li class="item item-toggle ">
+                Notifications
+                <label class="toggle toggle-energized">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li class="item item-toggle ">
+                Status(Online/Offline)
+                <label class="toggle toggle-energized">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <li ng-click="goTo('main.changePassword')" class="item">
+                Change Password
+            </li>
+          <li ng-click="aboutapp()" class="item">
+                About App
+            </li>
+            <li ng-click="privacypolicy()" class="item">
+                Privacy Policy
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

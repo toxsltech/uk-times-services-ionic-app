@@ -1,0 +1,60 @@
+<ion-view title="Book">
+    <ion-content padding="true" class="has-header bg-light">
+        <div class="list no-border">
+            <form name="bookingform" ng-submit="doneBooking(book,bookingform)" novalidate>
+                 <div class="ng-binding text-center text-break">
+                <strong>{{myservicename}}</strong> <br>  
+                £ {{myserviceprice}}/hr<br>     
+                </div>
+                    <span class="input-label">Country</span>
+                    <input name="location" ng-model="book.service_loc" class="app-input" type="text" placeholder="" required>
+                    <div ng-if=" (bookingform.location.$invalid == true && bookingform.location.$touched == true) || bookingform.$submitted " style="color:red ">
+                        <div ng-messages="bookingform.location.$error " style="color:red ">
+                            <div ng-message="required ">Your Country is required</div>
+                        </div>
+                    </div>
+                    <span class="input-label">Street</span>
+                    <input ng-model="book.street" name="Street" class="app-input" type="text" placeholder="" required>
+                    <div ng-if=" (bookingform.Street.$invalid == true && bookingform.Street.$touched == true) || bookingform.$submitted " style="color:red ">
+                        <div ng-messages="bookingform.Street.$error " style="color:red ">
+                            <div ng-message="required ">Your Street is required</div>
+                        </div>
+                    </div>
+                    <div class="row no-padding"> 
+                    <div class="col no-padding">
+                    <span style="width:100%;" class="input-label no-padding">City</span>
+                    <input ng-model="book.city" name="City" class="app-input" type="text" placeholder="" required>
+                    <div ng-if=" (bookingform.City.$invalid == true && bookingform.City.$touched == true) || bookingform.$submitted " style="color:red ">
+                        <div ng-messages="bookingform.City.$error " style="color:red ">
+                            <div ng-message="required " class="f-s">Your City is required</div>
+                        </div>
+                    </div>
+                    </div>
+                    <div style="padding-left:10px;" class="col no-padding">
+                    <span style="width:100%;" class="input-label no-padding">Post code</span>
+                    <input class="app-input" name="Post" ng-model="book.code" type="text" placeholder="" required>
+                    <div ng-if=" (bookingform.Post.$invalid == true && bookingform.Post.$touched == true) || bookingform.$submitted " style="color:red ">
+                        <div ng-messages="bookingform.Post.$error " style="color:red ">
+                            <div ng-message="required " class="text-left f-s">Your Post Code is required</div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <span class="input-label">Phone Number</span>
+                    <input ng-model="book.Number" name="Number" class="app-input" type="tel" placeholder="" required>
+                    <div ng-if=" (bookingform.Number.$invalid == true && bookingform.Number.$touched == true) || bookingform.$submitted " style="color:red ">
+                        <div ng-messages="bookingform.Number.$error" style="color:red ">
+                            <div ng-message="required ">Phone Number is required</div>
+                        </div>
+                    </div>
+                    <div class="login-btn">
+                        <br>
+                        <button type="submit" class="button button-block button-energized">
+                           Continue
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

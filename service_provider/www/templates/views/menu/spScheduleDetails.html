@@ -1,0 +1,65 @@
+<ion-view hide-back-button="true" cache-view="false" title="{{convertedDate | date:'longDate'}} at {{convertedDate | date:'shortTime'}}">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="$ionicGoBack()">
+            <i class="icon ion-android-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button ng-click="hitmessageaschdule()" class="button button-clear icon ion-android-chat ">
+        </button>
+    </ion-nav-buttons>
+    <div class="bar bar-subheader bar-positive  ">
+        <div class="title uppercase"><strong>{{taskname}}</strong></div>
+    </div>
+    <ion-content padding="false" class="has-subheader">
+        <div class="list card">
+            <div ng-click="direttomap()" class="item item-body">
+                <img width="100%" ng-src="{{pather}}">
+            </div>
+            <div ng-click="direttomap()" class="item item-icon-left item-icon-right item-text-wrap">
+                <i class="icon ion-ios-navigate-outline"></i>
+                <p class="text-dark">
+                    
+                    <strong>{{locationname}}</strong>
+                </p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </div>
+            <div class="item item-avatar">
+                <img ng-if="!imageprofileofuser" ng-src="img/user.jpg">
+                <img ng-if="imageprofileofuser" ng-src="{{imageprofileofuser}}">
+                <h2>{{taskname}} £{{pricecleint}} /hr</h2>
+            </div>
+            <div class="item item-divider">
+                Service Description
+            </div>
+            <div class="item item-text-wrap">
+                <p class="text-light fit-font">Details</p>
+                <p class="text-dark fit-font">
+                    {{abouttask}}
+                </p>
+                <p class="text-light fit-font">Service size</p>
+                <p class="text-dark fit-font">
+                    {{booking_hour}}
+                </p>
+            </div>
+            <div class="item item-divider">
+                Client Details
+            </div>
+            <div class="item item-avatar">
+                <img ng-if="!imagedatofallcwcateuser" src="img/user.jpg">
+                <img ng-if="imagedatofallcwcateuser" ng-src="{{imagedatofallcwcateuser}}">
+                <h2>Name: {{clientname}}</h2><br>
+                <h2>Surname: {{clientlastname}}</h2>
+            </div>
+            <div class="item item-book-time">
+                <button ng-click="hitmessageaschdule()" class="button button-block button-dark icon icon-left ion-android-chat"><strong>Chat</strong></button>
+                <div class="item item-icon-left scroll-y" ion-datetime-picker ng-model="dater">
+                    <i class="icon ion-ios-calendar positive"></i> Reschedule:
+                    <strong style="overflow-y:scroll; font-size:12px;" ng-if="booktimer">{{booktimer|date: "dd-mm-yy H:mm"}}</strong>
+                </div>
+                <button ng-click="cancelreason()" class="button button-block button-energized icon icon-left ion-close-round"><strong>Request Cancellation</strong></button>
+                <button ng-click="invoice()" class="button button-block button-positive icon icon-left ion-document-text"><strong>Create invoice</strong></button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

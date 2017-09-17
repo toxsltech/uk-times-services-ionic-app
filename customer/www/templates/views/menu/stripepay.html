@@ -1,0 +1,18 @@
+<ion-view title="Payment Details">
+    <ion-content padding="false" class="has-header ">
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Card number</span>
+            <input type="tel" ng-model="payment.card.number" name="cardNumber" cc-number>
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Expiry date</span>
+            <input type="tel" maxlength="2" name="expiry" ng-model="payment.card.exp_month" placeholder="MM">
+            <input type="tel" maxlength="4" name="expiry" ng-model="payment.card.exp_year" placeholder="YYYY">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">CVV</span>
+            <input type="tel" name="cvc" ng-model="payment.card.cvc">
+        </label>
+        <button type="submit" ng-click="hitstripepother(payment.card)" class="button button-full button-positive">Pay</button>
+    </ion-content>
+</ion-view>

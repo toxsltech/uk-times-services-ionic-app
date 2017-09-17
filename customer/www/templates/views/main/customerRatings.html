@@ -1,0 +1,41 @@
+<ion-view hide-back-button="true" title="Ratings & Reviews">
+    <ion-content padding="false" class="has-header">
+        <div class="table-box">
+            <div style="height:{{profileImgBoxSize}}px" class="table-cell v-mid profile-image-box">
+                <div ng-click="actionsheetcustomer(imagedataprofile)" class="profile-pic">
+                    <img ng-if="myratingimage" class="full-image" ng-src="{{myratingname}}">
+                   <img ng-if="!myratingimage" class="full-image" src="img/user.jpg">
+                    <p class="text-white text-center ng-binding" style="
+    line-height: 14px;
+">{{myratingname}}</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="item border-bottom text-center text-black">
+                Your Job is Completed !
+            </div>
+            <div class="item border-top">
+                <div class="stars text-center">
+
+                    <p class="text-black">Rate your Service Provider</p>
+                    <ionic-ratings ratingsobj='ratingsObject' index='$index'></ionic-ratings>
+                </div>
+            </div>
+            <div class="item no-border">
+                <div class="text-center">
+
+                    <p class="text-black">Comment</p>
+                    <textarea ng-model="commentext" class="review-box no-resize" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="login-btn padding">
+            <br>
+            <button ng-click="submitrating(commentext)" class="button button-block button-energized ">
+                            Submit
+                        </button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view title="Book">
+    <ion-content padding="true" class="has-header bg-light">
+        <div class="list no-border">
+            <div class="item  no-border">
+                <span class="input-label">Your Service Location</span>
+                <input ng-model="book.service_loc" class="app-input" type="text" placeholder="">
+                <span class="input-label">Street</span>
+                <input ng-model="book.street" class="app-input" type="text" placeholder="">
+                <span class="input-label">City</span>
+                <input ng-model="book.city" class="app-input" type="text" placeholder="">
+                <span class="input-label">Post Code</span>
+                <input class="app-input" ng-model="book.code" type="text" placeholder="">
+                <span class="input-label">Telephone Number</span>
+                <input ng-model="book.city" class="app-input" type="text" placeholder="">
+                <div class="login-btn">
+                    <br>
+                    <button ng-click="doneBooking(book)" class="button button-block button-energized">
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

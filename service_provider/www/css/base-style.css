@@ -1,0 +1,469 @@
+/*======================Base Properties ======================*/
+
+.sidemenu-bg {
+    background-color: rgba(0, 0, 0, .95);
+}
+
+.app-bg {
+    background-color: #3C145E;
+}
+
+.table-box {
+    display: table;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    width: 100%;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.v-mid {
+    vertical-align: middle;
+}
+
+.v-bottom {
+    vertical-align: bottom;
+}
+
+.spacer {
+    min-height: 100px;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.spacer-40 {
+    height: 40px;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+textarea.no-resize {
+    resize: none;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-dark {
+    color: #313131 !important;
+}
+
+.text-positive {
+    color: #01C8EB !important;
+}
+
+.text-light {
+    color: #999 !important;
+}
+
+.text-parrot {
+    color: #82C035 !important;
+}
+
+.text-break {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    word-break: normal !important;
+}
+
+.slim-font {
+    font-weight: lighter !important;
+}
+
+.fit-font {
+    font-weight: normal !important;
+}
+
+.fat-font {
+    font-weight: bold !important;
+}
+
+.f-xs {
+    font-size: 10px !important;
+}
+
+.f-xxs {
+    font-size: 8px !important;
+}
+
+.f-xs1 {
+    font-size: 12px !important;
+}
+
+.f-s {
+    font-size: 11px !important;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.f-md {
+    font-size: 16px !important;
+}
+
+.f-lg {
+    font-size: 42px !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+em,
+i {
+    font-style: italic !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.no-click {
+    pointer-events: none !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.no-radius {
+    border-radius: 0 !important;
+}
+
+.bg-dark {
+    background-color: rgba(0, 0, 0, .75) !important;
+    color: #fff !important;
+}
+
+.bg-black {
+    background-color: rgba(0, 0, 0, .9) !important;
+}
+
+.bg-royal {
+    background-color: #E81E85 !important;
+    color: #fff !important;
+}
+
+.bg-light {
+    background-color: #F5F5F5;
+}
+
+.bg-lighter {
+    background-color: #f8f8f8 !important;
+}
+
+.bg-clear {
+    background-color: transparent !important;
+}
+
+.border-l-r {
+    border-left: 1px solid #4A5E83!important;
+    border-right: 1px solid #4A5E83 !important;
+}
+
+.button.btn-clear,
+.button.btn-clear.activated {
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    min-height: 10px;
+    line-height: 15px;
+}
+
+.button-hollow.activated {
+    background-color: #38AE47 !important;
+    border-color: #38AE47 !important;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+label.item.item-input {
+    border-radius: 3px;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.margin-top-0 {
+    margin-top: 0 !important;
+}
+
+.item-input input {
+    -moz-appearance: none;
+    -moz-box-flex: 1;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none !important;
+    flex: 1 1 220px;
+    margin: 0;
+    padding-right: 24px;
+}
+
+.item.item-input.autocomplete-input {
+    overflow: visible !important;
+    z-index: 9999999 !important;
+}
+
+.angucomplete-dropdown.ng-hide {
+    z-index: 9999999 !important;
+}
+
+ion-item.cpn .item-content {
+    padding: 0px !important;
+}
+
+.item-input input {
+    -moz-appearance: none;
+    -moz-box-flex: 1;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none !important;
+    flex: 1 1 220px;
+    margin: 0;
+    padding-right: 24px;
+    padding-left: 5px;
+}
+
+.loading {
+    background-color: rgba(0, 0, 0, .5) !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding-top: 80% !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.loading-backdrop {
+    background-color: rgba(0, 0, 0, .5) !important;
+}
+
+.spinner svg {
+    fill: #01c8eb !important;
+    stroke: #01c8eb !important;
+}
+
+.spinner {
+    fill: #01c8eb !important;
+    stroke: #01c8eb!important;
+}
+
+.image-loader-container {
+    margin: 9px;
+    position: absolute;
+    background-color: transparent;
+    top: 10%;
+    left: 45%;
+}
+
+.form-error {
+    color: #fff;
+}
+
+input {
+    color: #000 !important;
+}
+
+.custom-popup.popup-container .popup {
+    border-radius: 15px !important;
+    position: relative !important;
+}
+
+.custom-popup.popup-container .popup .popup-head {
+    background-color: #E81E85 !important;
+    border-top-right-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+    padding: 4px 10px !important;
+}
+
+.custom-popup.popup-container .popup .popup-title {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.custom-popup.popup-container .popup .popup-body {
+    padding: 18px !important;
+}
+
+.custom-popup-2.popup-container .popup .popup-body {
+    padding: 18px !important;
+}
+
+.custom-popup-2.popup-container .popup {
+    border-radius: 15px !important;
+    position: relative !important;
+}
+
+.custom-popup-2.popup-container .popup .popup-head {
+    display: none !important;
+    border-top-right-radius: 15px !important;
+    border-top-left-radius: 15px !important;
+}
+
+.border-top {
+    border-top: 1px solid !important;
+    border-right: 0px solid !important;
+    border-bottom: 0px solid !important;
+    border-left: 0px solid !important;
+    border-color: #ccc !important;
+}
+
+.border-bottom {
+    border-top: 0px solid !important;
+    border-right: 0px solid !important;
+    border-bottom: 1px solid !important;
+    border-left: 0px solid !important;
+    border-color: #ccc !important;
+}
+
+.border-top-right {
+    border-top: 1px solid !important;
+    border-right: 1px solid !important;
+    border-bottom: 0px solid !important;
+    border-left: 0px solid !important;
+    border-color: #ccc !important;
+}
+
+.border-top-left {
+    border-top: 1px solid !important;
+    border-right: 0px solid !important;
+    border-bottom: 0px solid !important;
+    border-left: 0px solid !important;
+    border-color: #ccc !important;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #212121 !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #212121 !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #212121 !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #212121 !important;
+}
+
+.button.activated {
+    outline: none !important;
+    border-color: transparent !important;
+}
+
+.input-label {
+    font-size: 12px;
+}
+
+.app-input {
+    margin-bottom: 10px;
+}
+
+.app-menu-list .list .item {
+    background: #7FBD3F;
+    border: none;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.ic-menu {
+    height: 25px;
+    margin-left: 5px;
+}
+
+.image-box {
+    height: 100px;
+    width: 100px;
+}
+
+.image-box {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.image-box img {
+    height: 86px;
+    width: 86px;
+}
+
+.image-box img.full-image {
+    border-radius: 50% !important;
+}
+
+.app-selector select {
+    width: 100%;
+    border: 1px solid #A7ADB3;
+    height: 40px;
+    position: relative;
+    padding-right: 25px;
+}
+
+.bar .title.title-left {
+    text-align: center !important;
+}
+
+
+/*
+.checkbox.app-checkbox {
+    padding: 4px 0px;
+}
+
+.checkbox.app-checkbox span {
+    color: #000;
+}
+
+.checkbox.app-checkbox input,
+.checkbox.app-checkbox .checkbox-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    display: inline;
+    margin-left: -5px;
+}*/
+
+
+/*======================Base Properties End======================*/

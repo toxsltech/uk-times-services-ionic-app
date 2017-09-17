@@ -1,0 +1,33 @@
+<ion-view title="Book">
+    <ion-content padding="true" class="has-header bg-light">
+        <div class="list no-border">
+            <div class="item  no-border">
+             <div class="col">
+             <div class="ng-binding text-center text-break">
+                <strong>{{myservicename}}</strong> <br>  
+                £ {{myserviceprice}}/hr<br>     
+                </div>
+            <div>    
+                <span class="input-label">Your service Location</span>
+                <input class="app-input" readonly="true" type="text" placeholder="Full address" google-autocomplete-suggestion location="data.location" country-code="{{countryCode}}" on-selection="onAddressSelection(location)" ng-model="data.location.formatted_address" readonly required>
+                <span class="input-label">Type</span>
+                <input readonly="true" ng-click="actionsheetunit()" class="app-input" ng-model="value" type="text" placeholder="">
+                <span class="input-label">How Big is your Service </span>
+                <input readonly="true" ng-click="actionsheetunitservice()" class="app-input" ng-model="servicvalue" type="text" placeholder="">
+                  <span class="input-label">Schedule Date and Time</span>
+                  <div class="item item-icon-left" ion-datetime-picker ng-model="dater">
+                    <i class="icon ion-ios-calendar positive"></i>
+                <strong ng-model="booktimerdatapro" ng-if="booktimerdatapro">{{booktimerdatapro|date: "yyyy-MM-dd H:mm"}}</strong>
+                 </div>
+                <span class="input-label">Tell us about your service</span>
+                <textarea ng-model="book.about" class="no-resize padding f-s" rows="5" placeholder="Define your service briefly"></textarea>
+                <div class="login-btn">
+                    <br>
+                    <button ng-click="continue(book,booktimerdatapro)" class="button button-block button-energized">
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

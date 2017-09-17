@@ -1,0 +1,40 @@
+<ion-view title="Completed Services" cache-view="false">
+    <ion-content padding="true" class="has-header bg-light">
+        <div data-ng-repeat="data in jobdata" class="list card service-card no-padding">
+            <div class="item item-avatar item-service">
+                <img ng-if=!data.task.User.image src="img/user.jpg">
+                <img ng-if="data.task.User.image" ng-src="{{data.task.User.image}}">
+                <h2>{{data.task.User.first_name}} {{data.task.User.last_name}}</h2>
+                <!--<div class="text-parrot item-text-wrap">{{data.task.address}}</div>-->
+                <div class="price-status">
+                    <h2>£{{data.total_price | number:2}}</h2>
+                    <p class="text-parrot">Completed</p>
+                </div>
+            </div>
+            <div class="service-details">
+                <div class="item item-icon-left text-break">
+                    <i class="icon">
+                        <img class="ic-list" src="img/icons/ic_service.png">
+                    </i> Service: <span>{{data.task.service.service_name}} £{{data.task.service.price}} {{data.no_of_hour}} Hours Worked = £{{data.no_of_hour * data.task.service.price | number:2}}</span>
+                </div>
+                 <div ng-if="data.additional" class="item item-icon-left text-break">
+                    <i class="icon ion-cash ic_cash">
+                    </i> Expenses/additional : <span>£{{data.additional}}</span>
+                </div>
+                <div class="item item-icon-left text-break">
+                    <i class="icon">
+                        <img class="ic-list" src="img/icons/ic_location.png">
+                    </i> Address: <span>{{data.task.address}}</span>
+                </div>
+                
+                <div class="item item-icon-left text-break">
+                    <i class="icon">
+                        <img class="ic-list" src="img/icons/ic_clock.png">
+                    </i> <b>Service Time</b>: <span class="text-positive">{{data.task.booking_time_ios}}</span>
+                </div>
+                <div class="service-box-button">
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

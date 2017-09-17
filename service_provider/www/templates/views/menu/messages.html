@@ -1,0 +1,12 @@
+<ion-view title="Messages" hide-back-button="true">
+    <ion-content padding="false" class="has-header ">
+        <div  class="list">
+            <div ng-repeat="data in datalist" ng-click="checkmessageuserforhit(data)" class="item item-avatar item-notification item-icon-right">
+                <img ng-if="!data.image_file" src="img/user.jpg">
+                <img ng-if="data.image_file" ng-src="{{data.image_file}}">
+                <h2>{{data.to_name}}</h2>
+                <i class="ion-ios-arrow-right icon"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

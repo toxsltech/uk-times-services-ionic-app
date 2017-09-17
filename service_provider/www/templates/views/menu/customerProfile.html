@@ -1,0 +1,37 @@
+<ion-view title="Profile" id="page4" style="">
+    <ion-nav-buttons side="right">
+        <button ng-click="updateProfile(profile)" class="button button-clear button-icon">
+            <i class="icon">
+        	<img class="ic_edit"  src="img/icons/ic_edit.png">
+        </i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        <div class="table-box">
+            <div style="height:{{profileImgBoxSize}}px" class="table-cell v-mid profile-image-box">
+                <div class="profile-pic">
+                    <img class="full-image" src="img/user.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="list padding-horizontal ">
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">First Name</span>
+                <input ng-model="profile.first_name" type="text" placeholder="">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">ddEmail</span>
+                <input readonly="true" ng-model="profile.user_email" type="email" placeholder="">
+            </label>
+            <label class="item item-input item-stacked-label no-border">
+                <span class="input-label">Address</span>
+                <textarea ng-model="profile.address" rows="1" class="no-border no-resize" placeholder=""></textarea>
+            </label>
+        </div>
+    </ion-content>
+    <style type="text/css">
+    .bar.bar-positive {
+        border: none !important;
+    }
+    </style>
+</ion-view>

@@ -1,0 +1,87 @@
+<ion-view title="Profile" style="">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="ionicBack()">
+            <i class="icon ion-android-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button ng-if="showpencil" ng-click="updateProfile(user_profile,datadate)" class="button button-clear button-icon">
+            <i class="icon">
+            <img class="ic_edit"  src="img/icons/ic_edit.png">
+        </i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content padding="false" class="has-header">
+        <div class="table-box">
+            <div style="height:{{profileImgBoxSize}}px" class="table-cell v-mid profile-image-box">
+                <div ng-click="actionsheet()" class="profile-pic">
+                    <img ng-if="!imageData" class="full-image" src="img/user.jpg">
+                    <img ng-if="imageData" class="full-image" ng-src="{{imageData}}">
+                </div>
+            </div>
+        </div>
+        <div class="list padding-horizontal ">
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">First Name</span>
+                <input ng-change="alert()" type="text" ng-model="user_profile.first_name">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Surname</span>
+                <input ng-change="alert()" type="text" ng-model="user_profile.last_name">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Email</span>
+                <input readonly="true" type="email" ng-model="user_profile.user_email">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Phone Number</span>
+                <input ng-change="alert()" type="tel" ng-model="user_profile.phone">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Address</span>
+                <textarea ng-change="alert()" rows="1" class="no-border no-resize " ng-model="user_profile.address"></textarea>
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Nationality</span>
+                <input ng-change="alert()" type="text" ng-model="user_profile.nationality">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Date of Birth</span>
+                <input ng-change="alert()" class="" ng-model="user_profile.data" type="date" min="{{maxdate | date:'yyyy-MM-dd'}}" max="{{minDate | date:'yyyy-MM-dd'}}" ng-required="true">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Experience </span>
+                <input ng-change="alert()" type="tel" ng-model="user_profile.experiences">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+            <span  class="input-label">Skills</span>
+                <input ng-change="alert()" type="text" ng-model="user_profile.skill">
+            </label>
+           
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Bank Name</span>
+                <input ng-change="alert()" type="text" ng-model="user_profile.bank_name">
+            </label>
+            <label class="item item-input item-stacked-label border-bottom">
+                <span class="input-label">Bank Account Number</span>
+                <input ng-change="alert()" type="tel" ng-model="user_profile.bank_ac_no">
+            </label>
+            <label class="item item-input item-stacked-label no-border">
+                <span class="input-label">Branch Short Code </span>
+                <input ng-change="alert()" type="tel" ng-model="user_profile.branch_code">
+            </label>
+        </div>
+    </ion-content>
+    <script id="templates/modal.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar bar-header bar-positive">
+                <h1 class="title">Select Your Skill</h1>
+                <button class="button button-clear button-primary" ng-click="selectskills()">Done</button>
+            </ion-header-bar>
+            <ion-content class="padding">
+                <ion-checkbox ng-value="false" ng-repeat="item in listofskills" ng-model="selectvalue" ng-click="serverSideChange(item.service_name,selectvalue)">
+                    {{item.service_name }}
+                </ion-checkbox>
+        </ion-modal-view>
+    </script>
+</ion-view>

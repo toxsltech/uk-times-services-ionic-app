@@ -1,0 +1,60 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuView"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu hide-nav-bar="true" side="left" style="background-color:#7FBD3F;">
+        <ion-content class=" ">
+            <div class="spacer" style="width: 100%; height: 200px;">
+                <div class="table-box">
+                    <div height="150px" class="table-cell v-mid text-center">
+                        <div class="image-box">
+                            <img ng-if="!dataimage" class="full-image" src="img/user.jpg">
+                            <img ng-if="dataimage" class="full-image" ng-src="{{dataimage}}">
+                        </div>
+                        <p class="text-white h4 slim-font">{{name}}</p>
+                        <p ng-click="toggleLefts()" class="text-white"><u>View Profile</u></p>
+                    </div>
+                </div>
+            </div>
+            <ion-list id="" data-componentid="" class="app-menu-list">
+                <ion-item menu-close ng-click="acceptedTaskservice()" class="item-icon-left" id="" style="" data-componentid="">
+                    <i class="icon">
+                        <img class="ic-menu" src="img/icons/ic_services.png">
+                    </i>Completed Services
+                </ion-item>
+                
+                <ion-item menu-close ng-click="getsedhulelist()" class="item-icon-left" id="" style="" data-componentid="">
+                    <i class="icon ">
+                        <img class="ic-menu" src="img/icons/ic_my_schdule.png">
+                    </i>Booked Services
+                </ion-item>
+                <ion-item menu-close ng-click="notification()" class="item-icon-left" id="" style="" data-componentid="">
+                    <i class="icon ">
+                        <img class="ic-menu" src="img/icons/ic_notifications.png">
+                        </i>Notifications
+                </ion-item>
+                <ion-item menu-close ng-click="goTo('menu.spSettings')" class="item-icon-left" id="" style="" data-componentid="">
+                    <i class="icon ">
+                        <img class="ic-menu" src="img/icons/ic_settings.png">
+                        </i>Settings
+                </ion-item>
+                      <ion-item menu-close ng-click="aboutapp()" class="item-icon-left" id="" style="" data-componentid="">
+                    <i class="icon ">
+                    <img class="ic-menu" src="img/icons/question.png">
+                    </i>About App
+                </ion-item>
+                <ion-item menu-close ng-click="logout()" class="item-icon-left" id="" style="" data-componentid="">
+                    <i class="icon ">
+                    <img class="ic-menu" src="img/icons/ic_logout.png">
+                    </i>Logout
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

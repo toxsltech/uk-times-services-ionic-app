@@ -1,0 +1,41 @@
+<ion-view title="Chat">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="ionicBack()">
+            <i class="icon ion-android-arrow-back"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content on-swipe-down="onGesture('Swipe Down')" id="content" on-swipe-up="onGesture('Swipe up')" class="content-stable has-footer" on-swipe-left="hideTime = false" on-swipe-right="hideTime = true">
+        <div ng-repeat="datatest in messagedata track by $index" ng-class="{other: message.userId != myId}" class="messages">
+            <div ng-if="datatest.from_id == customerid" class="message">
+                <span ng-if="datatest.content" class="chatmsggrey">{{datatest.content}}</span>
+                <img ng-click="openModal(datatest.file_url)" class="left-img" style="height: 100px;width: 100px; margin: 0px 0px;float: left; background-color: #c7c7c7;border-radius: 6px;  padding: 5px;position: relative;" ng-if="datatest.file_url" ng-src="{{datatest.file_url}}">
+            </div>
+            <div ng-if="datatest.from_id == serviceid" class="message">
+                <span ng-if="datatest.content" class="chatmsg">{{datatest.content}}</span>
+                <img ng-click="openModal(datatest.file_url)" class="right-img" style="height: 100px;width: 100px; margin: 0px 0px;float: right; background-color: #00CDED; padding: 5px;border-radius: 6px;position: relative;" ng-if="datatest.file_url" ng-src="{{datatest.file_url}}">
+            </div>
+            <span style="margin-left: 10px; margin-top: 10px;" ng-if="!datatest.content && !datatest.file_url" class="chatmsggrey">{{datatest}}</span>
+        </div>
+        <img ng-click="openModal(imageData)" style="height: 100px;width: 100px;margin: 0px 15px;" ng-if="imageData" ng-src="{{imageData}}">
+    </ion-content>
+    <ion-footer-bar keyboard-attach class="bar-stable item-input-inset bar-chat no-padding">
+        <div class="item-input-wrapper chat-input item-input item">
+            <textarea class="no-resize no-border" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data" on-focus="inputUp()" on-blur="inputDown()">
+            </textarea>
+            <i ng-click="actionsheet()" class="icon ion-ios-camera-outline placeholder-icon"></i>
+        </div>
+        <button style="font-size:12px;" class="button  button-chat button-icon " ng-click="sendMessage(data)">SEND</button>
+    </ion-footer-bar>
+    <script id="modal.html" type="text/ng-template">
+        <div class="modal">
+            <ion-content style="background-color:black">
+                <button class="button icon icon-left ion-ios-close-outline" ng-click="closeModal()" style="
+background-color: #01c8eb;
+    color: white;
+    font-weight: bold;
+">Close</button>
+                <img ng-src="{{inspectionItem}}" class="fullscreen-imagedatachat"></h1>
+            </ion-content>
+        </div>
+    </script>
+</ion-view>

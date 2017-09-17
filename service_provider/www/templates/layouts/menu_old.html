@@ -1,0 +1,31 @@
+<ion-side-menus style="">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuView"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" id="side-menu21" style="background-color:#7FBD3F;">
+        <ion-header-bar class="bar-energized">
+            <div class="title">Home</div>
+        </ion-header-bar>
+        <ion-content padding="false" class="side-menu-left has-header ">
+            <div class="spacer" style="width: 253px; height: 202px;"></div>
+            <ion-list id="home-list1">
+                <ion-item class="item-icon-left dark" id="home-list-item1" style="">
+                    <i class="icon ion-ios-home-outline"></i>My Jobs</ion-item>
+                <ion-item class="item-icon-left" id="home-list-item3" ui-sref="home.book" menu-close="" style="">
+                    <i class="icon ion-android-notifications-none"></i>My Schedule</ion-item>
+                <ion-item class="item-icon-left" id="home-list-item4" ui-sref="home.book" menu-close="" style="">
+                    <i class="icon ion-android-settings"></i>Notification</ion-item>
+                <ion-item class="item-icon-left" id="home-list-item5" ui-sref="home.book" menu-close="" style="">
+                    <i class="icon ion-log-out"></i>Settings</ion-item>
+                <ion-item class="item-icon-left" id="home-list-item5" ui-sref="home.book" menu-close="" style="">
+                    <i class="icon ion-log-out"></i>Logout</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

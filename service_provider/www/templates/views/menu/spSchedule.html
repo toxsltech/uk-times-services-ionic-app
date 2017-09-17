@@ -1,0 +1,18 @@
+<ion-view title="Booked Services" hide-back-button="true" cache-view="false">
+    <ion-content padding="false" class="has-header">
+        <div  class="list">
+            <div  ng-repeat="sedhuledata in listdata" ng-click="sedhuldetails(sedhuledata)" class="item item-thumbnail-left item-task item-icon-right">
+                <div class="date-box">
+                    <p>{{ sedhuledata.booking_time_ios | MMM}}</p>
+                    <span>{{sedhuledata.booking_time_ios| daY}}</span>
+                    <p>{{sedhuledata.booking_time_ios | year}}</p>
+                </div>
+                <h2>{{sedhuledata.service.service_name}}</h2>
+                <h2>£{{sedhuledata.service.price}}</h2>
+                <span class="icon ion-ios-arrow-right text-positive">
+    
+                </span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

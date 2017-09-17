@@ -1,0 +1,14 @@
+<ion-view title="Notifications" hide-back-button="true" cache-view="false">
+    <ion-content padding="false" class="has-header ">
+        <div class="list">
+            <div ng-repeat="bookdata in listofjobs" ng-click="checkrequst(bookdata.task_id,bookdata.user_id)" class="item item-avatar item-notification item-icon-right">
+                <img ng-if="!bookdata.User.image" ng-src="img/user.jpg">
+                <img ng-if="bookdata.User.image" ng-src="{{bookdata.User.image}}">
+                <strong>{{bookdata.User.first_name}}</strong>
+                <h2>Service Hour - {{bookdata.booking_hour}}</h2>
+                <p>Location - {{bookdata.task_location}}</p>
+                <i style="color:#01c8eb" class="ion-ios-arrow-right icon"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

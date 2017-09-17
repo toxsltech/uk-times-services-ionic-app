@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/base-style.css" rel="stylesheet">
+    <link href="css/ion-datetime-picker.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .platform-ios .manual-ios-statusbar-padding {
+            padding-top: 20px;
+        }
+        
+        .manual-remove-top-padding {
+            padding-top: 0px;
+        }
+        
+        .manual-remove-top-padding .scroll {
+            padding-top: 0px !important;
+        }
+        
+        ion-list.manual-list-fullwidth div.list,
+        .list.card.manual-card-fullwidth {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        
+        ion-list.manual-list-fullwidth div.list>.item,
+        .list.card.manual-card-fullwidth>.item {
+            border-radius: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+        
+        .show-list-numbers-and-dots ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+        
+        .show-list-numbers-and-dots ol {
+            list-style-type: decimal;
+            padding-left: 40px;
+        }
+    </style>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngStorage.min.js"></script>
+    <script src="lib/angular-messages.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&libraries=places"></script>
+    <script src="lib/ng-cordova.js"></script>
+    <script type="text/javascript" src="js/PushNotification.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ionic-timepicker.bundle.min.js"></script>
+    <script src="js/ion-datetime-picker.min.js"></script>
+    <script src="js/ionic-numberpicker.bundle.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/rw-money-mask.min.js"></script>
+    <script src="js/format-as-currency.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+    <script src="cordova.js"></script>
+</head>
+
+<body ng-app="UkTimeServices" animation="slide-left-right-ios7">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button class="button-icon icon ion-android-arrow-back"></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+</body>
+
+</html>

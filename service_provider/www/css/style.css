@@ -1,0 +1,522 @@
+/*==============================================
+1 - Login Page Styling
+===============================================*/
+
+.app-input {
+    border: 1px solid #A7ADB3 !important;
+    width: 100%;
+    height: 40px !important;
+    padding: 0px 10px !important;
+}
+
+.fullscreen-imagedatachat {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: 2px solid #01c8eb;
+}
+
+.bar.bar-positive {
+    border: none !important;
+}
+
+.app-inputdate {
+    border: 1px solid #A7ADB3 !important;
+    width: 100%;
+    height: 40px !important;
+    padding: 10px 10px !important;
+}
+
+.item.item-checkbox.app-checkbox {
+    padding: 0px 0px 4px 20px;
+    margin: 15px 0px;
+    border: none;
+}
+
+.item.item-checkbox.app-checkbox .checkbox-square .checkbox-icon {
+    position: absolute;
+    left: -12px;
+    top: 8px;
+}
+
+.app-checkbox .checkbox-square .checkbox-icon::before {
+    border: 1px solid #666;
+    height: 15px;
+    width: 15px;
+}
+
+.checkbox input:checked::before,
+.checkbox input:checked+.checkbox-icon::before {
+    background: #01C8EB;
+    border-color: #01C8EB;
+}
+
+.platform-android .checkbox-platform input::after,
+.platform-android .checkbox-platform .checkbox-icon::after,
+.checkbox-square input::after,
+.checkbox-square .checkbox-icon::after {
+    top: 28%;
+    left: 25%;
+    width: 10px;
+    height: 5px;
+}
+
+.r-me {
+    font-size: 14px;
+}
+
+.input-label {
+    color: #000;
+}
+
+.link-para p {
+    color: #000;
+}
+
+.relative.placeholder-icon-input i.icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+/*==============================================
+2 - Signup Page Styling
+===============================================*/
+
+.relative.placeholder-icon-input input {
+    padding-right: 32px !important;
+}
+
+.image-loader-container {
+    margin: 9px;
+    max-width: 81px;
+    max-height: 81px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+}
+
+
+/*==============================================
+3 - Customer Home Page Styling
+===============================================*/
+
+.item-box {
+    display: inline-block;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+}
+
+.item-box i {
+    font-size: 50px;
+    color: #01C8EB;
+}
+
+.item-box-content .cat-name {
+    margin-top: 12px;
+    color: #000;
+    font-size: 12px;
+}
+
+
+/*==============================================
+4 - Customer Services Page Styling
+===============================================*/
+
+.list.card.service-card .item.item-avatar.item-service {
+    padding-right: 75px;
+    overflow-y: scroll;
+}
+
+.item.item-avatar.item-service img {
+    top: 10px;
+    left: 10px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.item.item-avatar.item-service h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.item.item-avatar.item-service p {
+    font-size: 12px;
+}
+
+.price-status {
+    text-align: right;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.service-details .item {
+    border: none;
+}
+
+.ic-list {
+    height: auto;
+    width: 15px;
+}
+
+.service-details .item {
+    padding: 2px 15px 2px 30px;
+    font-size: 12px;
+    color: #000;
+}
+
+.service-box-button {
+    margin-top: 10px;
+}
+
+.service-box-button .button {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.bar.bar-positive .title {
+    color: #fff;
+    font-weight: bold;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+
+/*==============================================
+5 - Customer Settings Page Styling
+===============================================*/
+
+.setting-list .item {
+    border-color: #e3e3e3;
+}
+
+
+/*==============================================
+6 - Customer Settings Page Styling
+===============================================*/
+
+.ic_edit {
+    width: 18px;
+    height: auto;
+    margin-right: 8px;
+    margin-top: 6px;
+}
+
+.profile-image-box {
+    background-color: #01C8EB;
+}
+
+.profile-pic {
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.profile-pic img {
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+}
+
+
+/*==============================================
+6 - Forgot Password Page Styling
+===============================================*/
+
+.forgot-ico img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*==============================================
+7 - Chat Page Styling
+===============================================*/
+
+.messages {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-align-content: center !important;
+    -ms-flex-line-pack: center !important;
+    align-content: center !important;
+    -webkit-box-align: center !important;
+    -moz-box-align: center !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+}
+
+.messages .message {
+    -webkit-box-flex: 1 !important;
+    -moz-box-flex: 1 !important;
+    -webkit-flex: 1 1 auto !important;
+    -ms-flex: 1 1 auto !important;
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    -webkit-transition: all 250ms ease-in-out !important;
+    transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.time {
+    -webkit-box-flex: 0 !important;
+    -moz-box-flex: 0 !important;
+    -webkit-flex: 0 1 auto !important;
+    -ms-flex: 0 1 auto !important;
+    flex: 0 1 auto !important;
+    -webkit-align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+    align-self: auto !important;
+    width: 120px !important;
+    text-align: center !important;
+    padding: 0 0 0 0 !important;
+    -webkit-transition: all 250ms ease-in-out !important;
+    transition: all 250ms ease-in-out !important;
+    -webkit-transform: translate3d(10px, 0, 0) !important;
+    -moz-transform: translate3d(10px, 0, 0) !important;
+    transform: translate3d(10px, 0, 0) !important;
+}
+
+.time.slide-right {
+    -webkit-transform: translate3d(130px, 0, 0) !important;
+    -moz-transform: translate3d(130px, 0, 0) !important;
+    transform: translate3d(130px, 0, 0) !important;
+}
+
+.messages.other .message {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    text-align: right !important;
+}
+
+span.chatmsggrey {
+    background: #c7c7c7 !important;
+    display: inline-block !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+    text-align: left !important;
+    max-width: 240px !important;
+    float: left;
+    position: relative;
+}
+
+span.chatmsggrey::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 4px;
+    border-left: 0px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #c7c7c7;
+}
+
+.messages.other .message.slide-right {
+    -webkit-transform: translate3d(120px, 0, 0) !important;
+    -moz-transform: translate3d(120px, 0, 0) !important;
+    transform: translate3d(120px, 0, 0) !important;
+}
+
+.messages.other span.chatmsg {
+    color: black !important;
+    background-color: #E3E3E3 !important;
+}
+
+span.chatmsg {
+    background: #00CDED !important;
+    display: inline-block !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+    text-align: left !important;
+    max-width: 240px !important;
+    float: right;
+    position: relative;
+}
+
+span.chatmsg::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 4px;
+    border-left: 12px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 10px solid #00CDED;
+}
+
+.right-img::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 4px;
+    border-left: 12px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 10px solid #00CDED;
+}
+
+.left-img::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 4px;
+    border-left: 12px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 10px solid #00CDED;
+}
+
+
+/*==============================================
+9 - Schedule Page Styling
+===============================================*/
+
+.item.item-thumbnail-left.item-task {
+    padding-right: 80px;
+    padding-left: 80px;
+    min-height: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.item.item-thumbnail-left.item-task h2 {
+    margin-top: 10px;
+}
+
+.item.item-thumbnail-left.item-task .task-avatar {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    top: 35px;
+    right: 15px;
+}
+
+.item.item-thumbnail-left.item-task img {
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+.date-box {
+    position: absolute;
+    left: 20px;
+    text-align: center;
+    border-right: 1px solid #c5c5c5;
+    padding-right: 15px;
+}
+
+.date-box span {
+    font-size: 24px;
+    color: #000;
+    line-height: 40px;
+}
+
+.date-box p {
+    font-size: 15px;
+    margin: 0px !important;
+    line-height: 22px;
+    color: #333;
+}
+
+.button.button-positive.no-margin.no-radius.uppercase {
+    line-height: 40px;
+}
+
+.button.button-positive.tab-selected {
+    color: #333;
+    font-weight: bold;
+}
+
+.item-input-wrapper.chat-input.item-input.item i {
+    font-size: 24px;
+    padding: 0px 15px;
+}
+
+label.app-check.item.item-checkbox {
+    border: none;
+    font-size: 12px;
+    margin-left: -22px;
+}
+
+.item-input-wrapper.chat-input.item-input.item {
+    border: none;
+}
+
+.item-input-wrapper.chat-input.item-input.item textarea {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+i.icon.ion-cash.ic_cash {
+    font-size: 16px;
+    margin-left: -10px;
+    color: #999;
+}
+
+.popup-container .popup {
+    width: 250px;
+    max-width: 100%;
+    max-height: 90%;
+    background-color: #fff;
+}
+
+input.popup-input {
+    padding: 4px;
+    border: 1px solid #ccc;
+    width: 177px;
+    margin-left: 23px;
+}
+
+.skill-item {
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    border: 1px solid #999;
+    padding: 5px 6px;
+    height: 40px;
+}
+
+span.user_skill {
+    padding: 6px 10px;
+    margin: 0px 5px 0px 0px;
+    background: #c5c5c5;
+    line-height: 30px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}

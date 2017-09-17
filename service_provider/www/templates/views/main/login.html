@@ -1,0 +1,47 @@
+<ion-view title="Login" hide-back-button="true" id="page1" style="" cache-view="false">
+    <ion-content padding="true" class="has-header">
+        <div class="table-box">
+            <div style="height:100px;" class="table-cell text-center v-mid">
+                <img style="width:160px;" src="img/logo.png">
+            </div>
+        </div>
+        <form name="userForm" ng-submit=" login(userForm)" novalidate>
+            <div class="list no-border ">
+                <div class="item no-border ">
+                    <span class="input-label ">Email</span>
+                    <input class="app-input " ng-model="user.email " name="email " type="email " ng-pattern="/.{1,}@[_a-z0-9A-Z]+(\.[a-z0-9A-Z]+)+/ " placeholder=" " ng-required="true ">
+                    <div ng-if=" (userForm.email.$invalid==true && userForm.email.$touched==true) || userForm.$submitted " style=" color:red ">
+                        <div ng-messages="userForm.email.$error " style="color:red ">
+                            <div ng-show="userForm.email.$error.email ">Email is invalid</div>
+                            <div ng-message="required ">Email is required</div>
+                        </div>
+                    </div>
+                    <span class="input-label ">Password</span>
+                    <input class="app-input " name="password " ng-model="user.password " type="password" placeholder=" " ng-required="true ">
+                    <div ng-if=" (userForm.password.$invalid==true && userForm.password.$touched==true) || userForm.$submitted " style="color:red ">
+                        <div ng-messages="userForm.password.$error " style="color:red ">
+                            <div ng-message="required ">This field is required</div>
+                        </div>
+                    </div>
+                    <div class="row no-padding ">
+                        <div class="col no-padding ">
+                            <ion-checkbox ng-model="HasPassport" ng-click="CheckPassport(HasPassport)" class="app-check">Remember me</ion-checkbox>
+                        </div>
+                        <div class="col no-padding ">
+                            <div class="item item-checkbox app-checkbox text-right ">
+                                <span ui-sref="main.forgotPassword" class="r-me text-positive f-s ">Forgot Password?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-btn ">
+                        <br>
+                        <button class="button button-block button-energized ">
+                            Login
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

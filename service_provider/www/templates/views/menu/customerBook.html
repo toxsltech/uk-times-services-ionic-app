@@ -1,0 +1,32 @@
+<ion-view title="Book">
+    <ion-content padding="true" class="has-header bg-light">
+        <div class="list no-border">
+            <div class="item  no-border">
+                <span class="input-label">Your Location</span>
+                <input class="app-input" ng-model="book.location" type="text" placeholder="">
+                <span class="input-label">Type</span>
+                <input class="app-input" ng-model="book.unit" type="text" placeholder="">
+                <span class="input-label">How Big is your Service </span>
+                <input class="app-input" ng-model="book.hrs" type="number" placeholder="">
+                <div class="relative  placeholder-icon-input">
+                    <span class="input-label ">Schedule Date </span>
+                    <i class="icon ion-ios-calendar-outline"></i>
+                    <input ng-model="book.date" type="date" class="app-input ">
+                </div>
+                <div class="relative  placeholder-icon-input">
+                    <span class="input-label ">Schedule Time </span>
+                    <i class="icon ion-android-time"></i>
+                    <input style="width:100%;" ng-model="book.time" class="app-input " type="time">
+                </div>
+                <span class="input-label">Tell us about your service</span>
+                <textarea ng-model="book.about" class="no-resize padding f-s" rows="5" placeholder="Define your service briefly"></textarea>
+                <div class="login-btn">
+                    <br>
+                    <button ng-click="continue(book)" class="button button-block button-energized">
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,59 @@
+<ion-view title="Booked Services">
+    <ion-content padding="true" class="has-header bg-light">
+        <div ng-click="sedhuldetails(data)" ng-repeat="data in jobdata" class="list card service-card no-padding">
+            <div class="item item-avatar item-service item-text-wrap">
+                <img ng-if="data.booking_status == '' && data.user.image" ng-src="{{data.user.image}}">
+                <img ng-if="data.booking_status == '' && !data.user.image" ng-src="img/user.jpg">
+                <img ng-if="!data.booking_status == '' && data.alocate_user.image" ng-src="{{data.alocate_user.image}}">
+                <img ng-if="!data.booking_status == '' &&  !data.alocate_user.image" ng-src="img/user.jpg">
+                <h2 ng-if="data.booking_status == ''">{{data.user.first_name}} {{data.user.last_name}}</h2>
+                
+                <div ng-if="data.booking_status=='' " class="price-status">
+                    <p style="color: #82C035 !important;" class=" text-parrot ">Booked</p>
+                </div>
+            </div>
+            <div class="service-details ">
+                <div ng-if="data.booking_status=='' " class="item item-icon-left text-break ">
+                    <i class="icon icon ion-ios-grid-view-outline " style="font-size: 20px;left: 4px; ">
+                    </i>Booking ID : <span>{{data.booking_id}}</span>
+                </div>
+                <div ng-if="data.booking_status=='' " class="item item-icon-left text-break ">
+                    <i class="icon icon ion-ios-briefcase-outline " style="font-size: 20px;left: 4px; ">
+                    </i>Service Type : <span>{{data.book_for}}</span>
+                </div>
+                <div ng-if="data.booking_status=='' " class="item item-icon-left text-break ">
+                    <i class="icon ">
+                      <img class="ic-list " src="img/icons/ic_service.png " style="font-size: 20px;left: 4px; ">
+                    </i>Service Name: <span>{{data.service.service_name}}</span>
+                </div>
+                <div ng-if="data.booking_status=='' " class="item item-icon-left text-break ">
+                    <i class="icon icon ion-ios-at " style="font-size: 20px;left: 4px; ">
+                    </i>Eamil : <span>{{data.user.user_email}}</span>
+                </div>
+                <div ng-if="data.booking_status=='' " class="item item-icon-left text-break ">
+                    <i class="icon icon ion-clock " style="font-size: 20px;left: 4px; ">
+                    </i>Service Hours : <span>{{data.booking_hour}}</span>
+                </div>
+                <div ng-if="!data.booking_status=='' " class="item item-icon-left text-break item-icon-right ">
+                    <i class="icon ">
+                        <img class="ic-list " src="img/icons/ic_location.png ">
+                    </i> Address: <span>{{data.address}}</span>
+                    <i class="icon ion-ios-arrow-right text-positive "></i>
+                </div>
+
+                <div ng-if="!data.booking_status=='' " class="item item-icon-left text-break ">
+                    <i class="icon ">
+                        <img class="ic-list " src="img/icons/ic_postal_code.png ">
+                    </i> Post Code: <span>{{data.postal_code}}</span>
+
+                </div>
+                <div class="item item-icon-left text-break ">
+                    <i class="icon ">
+                        <img class="ic-list " src="img/icons/ic_clock.png ">
+                    </i> <b>Service Time</b>: <span class="text-positive ">{{data.booking_time}}</span>
+                </div>
+                
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

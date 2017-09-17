@@ -1,0 +1,62 @@
+<ion-view title="Sign Up" id="page2" style="">
+    <ion-content padding="true" class="has-header">
+        <form name="userForm" ng-submit="signUpUser2(userForm,user)" novalidate>
+            <div class="list no-border">
+                <div class="item  no-border">
+                    <span class="input-label">Experience</span>
+                    <input class="app-input" type="text" ng-model="user.Experiance" name="Experiance" required>
+                    <div ng-if=" (userForm.Experiance.$invalid == true && userForm.Experiance.$touched == true) || userForm.$submitted ">
+                        <div ng-messages="userForm.Experiance.$error " style="color:red ">
+                            <div ng-message="required ">Please enter Experience</div>
+                        </div>
+                    </div>
+
+            <div  class="input-label ">Skills </div>         
+            <div  ng-click="modal.show()"  class="skill-item">        
+                <span class="user_skill"  ng-repeat="data in selectvalue">{{data}}</span>   
+            </div>
+
+                    <span class="input-label">Bank Name</span>
+                    <input ng-model="user.Bank" name="Bank" class="app-input" type="text" required>
+                    <div ng-if=" (userForm.Bank.$invalid == true && userForm.Bank.$touched == true) || userForm.$submitted ">
+                        <div ng-messages="userForm.Bank.$error " style="color:red ">
+                            <div ng-message="required ">Please enter Bank Name</div>
+                        </div>
+                    </div>
+                    <span class="input-label">Bank Account Number</span>
+                    <input ng-model="user.Account" name="Account" class="app-input" type="number" required>
+                    <div ng-if=" (userForm.Account.$invalid == true && userForm.Account.$touched == true) || userForm.$submitted ">
+                        <div ng-messages="userForm.Account.$error " style="color:red ">
+                            <div ng-message="required ">Please enter Bank Account Number</div>
+                        </div>
+                    </div>
+                    <span class="input-label">Bank Sort Code</span>
+                    <input ng-model="user.Short" name="Short" class="app-input" type="number" required>
+                    <div ng-if=" (userForm.Short.$invalid == true && userForm.Short.$touched == true) || userForm.$submitted ">
+                        <div ng-messages="userForm.Short.$error " style="color:red ">
+                            <div ng-message="required ">Please enter Bank Short Code</div>
+                        </div>
+                    </div>
+                    <div class="login-btn">
+                        <br>
+                        <button type="submit" class="button button-block button-energized">
+                            Done
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
+<script id="templates/modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+            <h1 class="title">Select Your Skill</h1>
+            <button class="button button-clear button-primary" ng-click="selectskills()">Done</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <ion-checkbox ng-value="false" ng-repeat="item in listofskills" ng-model="selectvalue" ng-click="serverSideChange(item.service_name,selectvalue)">
+                {{item.service_name }}
+            </ion-checkbox>
+    </ion-modal-view>
+</script>
